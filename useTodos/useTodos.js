@@ -1,5 +1,5 @@
 import { useReducer,useEffect } from "react"
-import { todoReducer } from "../todoReducer"
+import { todoReducer } from "./todoReducer"
 const initializer = () => {
     return JSON.parse(localStorage.getItem('todos')) || []
 }
@@ -17,7 +17,6 @@ export const useTodos = () => {
             type: '[TODO] Add Todo',
             payload: todo
         }
-    
         dispatch( action );
     }
 
